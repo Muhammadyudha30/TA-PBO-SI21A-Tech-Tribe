@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        /* (style remains unchanged) */
+    </style>
+</head>
+<body>
+
+<div class="menu-container">
+    <!-- Other menu items -->
+
+    <div class="user-info">
+        <span id="loggedInUsername"></span>
+        <a href="index.html" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<script>
+     // Retrieve username from localStorage
+     var loggedInUsername = localStorage.getItem("username");
+    // Display username in the menu
+    document.getElementById("loggedInUsername").innerText = loggedInUsername;
+   
+    function logout() {
+        // Perform logout actions (clear localStorage, redirect, etc.)
+        localStorage.removeItem("username");
+        window.location.href = "login.html"; // Redirect to login page
+    }
+        
+</script>
+
+</body>
+</html>
